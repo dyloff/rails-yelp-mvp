@@ -1,0 +1,11 @@
+<h1>  Add New Restaurant </h1>
+
+<div class="mt-3">
+  <%= simple_form_for(@restaurant) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :phone_number %>
+    <%= f.input :category, collection: Restaurant::CATEGORIES %>
+    <%= f.submit "Submit", class: "btn btn-primary mt-3" %>
+  <% end %>
+</div>
